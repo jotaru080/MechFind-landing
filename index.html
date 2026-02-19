@@ -3,38 +3,57 @@
 <head>
 <title>Mechanap - Emergency Roadside Help</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background-color: #F5F7FA;
+  background-color: #F4F6F9;
+  color: #1E3A5F;
   text-align: center;
 }
+
 header {
-  background-color: #1E3A5F;
+  background-color: #1E3A5F; /* Dark Blue */
   color: white;
-  padding: 40px 20px;
+  padding: 60px 20px;
 }
+
 h1 {
   margin: 0;
+  font-size: 40px;
 }
-.btn {
-  background-color: #E53935;
+
+.btn-primary {
+  background-color: #E53935; /* Emergency Red */
   color: white;
-  padding: 15px 25px;
+  padding: 15px 30px;
   text-decoration: none;
   display: inline-block;
-  margin: 15px;
+  margin-top: 20px;
   border-radius: 8px;
+  font-weight: bold;
 }
+
 .section {
-  padding: 40px 20px;
+  padding: 60px 20px;
 }
+
 .features {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  max-width: 600px;
+  margin: auto;
 }
+
+.feature-box {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+}
+
 footer {
   background-color: #1E3A5F;
   color: white;
@@ -48,32 +67,27 @@ footer {
 <header>
   <h1>Mechanap</h1>
   <p>One-Tap Emergency Access to Nearby Trusted Mechanics</p>
-  <a href="#contact" class="btn">Get Help Now</a>
+  <a href="#contact" class="btn-primary">Get Help Now</a>
 </header>
 
 <div class="section">
   <h2>The Problem</h2>
-  <p>Car breakdowns cause stress, delays, and income loss. Finding a nearby reliable mechanic is difficult during emergencies.</p>
+  <p>Vehicle breakdowns cause stress, delays, and lost income. Drivers struggle to find nearby trusted mechanics during emergencies.</p>
 </div>
 
 <div class="section">
   <h2>Our Solution</h2>
-  <p>Mechanap instantly detects your location and connects you to nearby available mechanics through a live map.</p>
+  <p>Mechanap instantly detects your location and connects you to nearby available mechanics through a live map and direct call feature.</p>
 </div>
 
 <div class="section">
   <h2>Key Features</h2>
   <div class="features">
-    <p>✔ One-Tap Emergency Button</p>
-    <p>✔ Real-Time Location Detection</p>
-    <p>✔ Live Map of Nearby Mechanics</p>
-    <p>✔ Direct Call & Chat Feature</p>
+    <div class="feature-box">🚨 One-Tap Emergency Button</div>
+    <div class="feature-box">📍 Real-Time Location Detection</div>
+    <div class="feature-box">🗺 Live Map of Nearby Mechanics</div>
+    <div class="feature-box">📞 Direct Call & Chat Feature</div>
   </div>
-</div>
-
-<div class="section">
-  <h2>Why Choose Mechanap?</h2>
-  <p>Faster assistance, reduced stress, minimized delays, and trusted local service.</p>
 </div>
 
 <div class="section" id="contact">
@@ -83,7 +97,7 @@ footer {
 </div>
 
 <footer>
-  <p>© 2026 Mechanap | Emergency Roadside Assistance</p>
+  <p>© 2026 Mechanap | Drive with Confidence</p>
 </footer>
 
 </body>
