@@ -6,58 +6,79 @@
 
 <style>
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  background-color: #F4F6F9;
-  color: #1E3A5F;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #F2F5F9;
+  color: #0F172A;
+}
+
+/* HEADER */
+header {
+  background: #0F2A47;
+  color: white;
+  padding: 70px 20px;
   text-align: center;
 }
 
-header {
-  background-color: #1E3A5F; /* Dark Blue */
-  color: white;
-  padding: 60px 20px;
+header h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
 }
 
-h1 {
-  margin: 0;
-  font-size: 40px;
+header p {
+  font-size: 18px;
+  opacity: 0.9;
 }
 
-.btn-primary {
-  background-color: #E53935; /* Emergency Red */
+.cta-btn {
+  background: #E10600;
   color: white;
-  padding: 15px 30px;
+  padding: 15px 35px;
+  border-radius: 8px;
   text-decoration: none;
+  font-weight: bold;
   display: inline-block;
   margin-top: 20px;
-  border-radius: 8px;
-  font-weight: bold;
 }
 
+/* SECTION */
 .section {
-  padding: 60px 20px;
+  padding: 70px 20px;
+  text-align: center;
 }
 
-.features {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 600px;
-  margin: auto;
+.section h2 {
+  margin-bottom: 15px;
+  font-size: 30px;
+  color: #0F2A47;
 }
 
-.feature-box {
-  background-color: white;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+/* FEATURE DEMO CARDS */
+.feature {
+  background: white;
+  margin: 25px auto;
+  max-width: 800px;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
 }
 
-footer {
-  background-color: #1E3A5F;
-  color: white;
+.demo-box {
+  margin-top: 20px;
   padding: 20px;
+  background: #F8FAFC;
+  border-radius: 10px;
+  border: 2px dashed #CBD5E1;
+  font-size: 15px;
+}
+
+/* FOOTER */
+footer {
+  background: #0F2A47;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  margin-top: 40px;
 }
 </style>
 </head>
@@ -67,37 +88,70 @@ footer {
 <header>
   <h1>Mechanap</h1>
   <p>One-Tap Emergency Access to Nearby Trusted Mechanics</p>
-  <a href="#contact" class="btn-primary">Get Help Now</a>
+  <a href="#demo" class="cta-btn">Try the Demo</a>
 </header>
 
 <div class="section">
   <h2>The Problem</h2>
-  <p>Vehicle breakdowns cause stress, delays, and lost income. Drivers struggle to find nearby trusted mechanics during emergencies.</p>
+  <p>Car breakdowns cause stress, delays, and lost income. Drivers struggle to find nearby reliable mechanics during emergencies.</p>
 </div>
 
-<div class="section">
-  <h2>Our Solution</h2>
-  <p>Mechanap instantly detects your location and connects you to nearby available mechanics through a live map and direct call feature.</p>
-</div>
+<div class="section" id="demo">
+  <h2>Live Feature Demo</h2>
 
-<div class="section">
-  <h2>Key Features</h2>
-  <div class="features">
-    <div class="feature-box">🚨 One-Tap Emergency Button</div>
-    <div class="feature-box">📍 Real-Time Location Detection</div>
-    <div class="feature-box">🗺 Live Map of Nearby Mechanics</div>
-    <div class="feature-box">📞 Direct Call & Chat Feature</div>
+  <div class="feature">
+    <h3>🚨 One-Tap Emergency Button</h3>
+    <p>Instant emergency activation for roadside help.</p>
+    <div class="demo-box">
+      [ DEMO SCREEN ]  
+      Big red emergency button appears → User taps → Searching for nearby mechanics...
+    </div>
   </div>
+
+  <div class="feature">
+    <h3>📍 Real-Time Location Detection</h3>
+    <p>Automatically detects driver’s GPS location.</p>
+    <div class="demo-box">
+      [ DEMO SCREEN ]  
+      Location detected: Davao City  
+      Matching nearby mechanics...
+    </div>
+  </div>
+
+  <div class="feature">
+    <h3>🗺 Live Map of Nearby Mechanics</h3>
+    <p>See available mechanics with expertise and distance.</p>
+    <div class="demo-box">
+      [ DEMO SCREEN ]  
+      • Juan Auto Repair – 1.2 km – Engine Specialist  
+      • Mark Garage – 2.5 km – Electrical Expert  
+    </div>
+  </div>
+
+  <div class="feature">
+    <h3>📞 Direct Call & Chat</h3>
+    <p>Contact mechanics instantly with one tap.</p>
+    <div class="demo-box">
+      [ DEMO SCREEN ]  
+      Call Now | Chat Now  
+      Mechanic confirmed: On the way (15 mins ETA)
+    </div>
+  </div>
+
 </div>
 
-<div class="section" id="contact">
-  <h2>Contact Us</h2>
-  <p>Email: mechanap@gmail.com</p>
-  <p>Phone: +63 9XX XXX XXXX</p>
+<div class="section">
+  <h2>Why Choose Mechanap?</h2>
+  <p>✔ Faster assistance  
+     ✔ Less stress  
+     ✔ Reduced delays  
+     ✔ Trusted local mechanics</p>
+  <a href="#" class="cta-btn">Download Soon</a>
 </div>
 
 <footer>
   <p>© 2026 Mechanap | Drive with Confidence</p>
+  <p>Email: mechanap@gmail.com | Davao City, Philippines</p>
 </footer>
 
 </body>
