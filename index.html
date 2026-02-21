@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MechFind Live Demo</title>
+
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -34,6 +35,11 @@
         border-radius: 8px;
         font-size: 16px;
         cursor: pointer;
+        transition: 0.2s;
+    }
+
+    button:hover {
+        opacity: 0.9;
     }
 
     .btn-emergency { background: #e53935; color: white; }
@@ -48,6 +54,7 @@
     }
 </style>
 </head>
+
 <body>
 
 <h1>🚗 MechFind Live Demo</h1>
@@ -65,7 +72,8 @@
 </div>
 
 <div class="card">
-    <h3>🗺 Nearby Mechanics</h3>
+    <!-- FIXED ICON HERE -->
+    <h3>📍 Nearby Mechanics</h3>
     <button class="btn-map" onclick="showMechanics()">Show Mechanics</button>
     <div id="mapOutput" class="output"></div>
 </div>
@@ -89,7 +97,7 @@ function locationDetect() {
 
 function showMechanics() {
     document.getElementById("mapOutput").innerText =
-    "Juan Auto Repair (1.2km), Mark Garage (2.5km)";
+    "Juan Auto Repair (1.2 km), Mark Garage (2.5 km)";
 }
 
 function contact() {
