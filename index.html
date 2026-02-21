@@ -4,54 +4,42 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MechFind Live Demo</title>
-
 <style>
     body {
         font-family: Arial, sans-serif;
-        background: #f5f7fb;
-        margin: 0;
-        padding: 20px;
+        background: #f4f6f9;
         text-align: center;
+        padding: 20px;
     }
 
     h1 {
-        color: #2c3e50;
-        margin-bottom: 30px;
-    }
-
-    .container {
-        max-width: 600px;
-        margin: auto;
+        color: #333;
     }
 
     .card {
         background: white;
         padding: 20px;
-        margin-bottom: 20px;
-        border-radius: 15px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        margin: 15px auto;
+        width: 90%;
+        max-width: 400px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
-    .title {
-        font-size: 18px;
-        font-weight: bold;
-        margin-bottom: 10px;
-    }
-
-    .btn {
-        display: inline-block;
+    button {
+        width: 100%;
+        padding: 12px;
         margin-top: 10px;
-        padding: 12px 20px;
-        border-radius: 10px;
         border: none;
+        border-radius: 8px;
         font-size: 16px;
         cursor: pointer;
     }
 
-    .danger { background: #e74c3c; color: white; }
-    .primary { background: #3498db; color: white; }
-    .success { background: #2ecc71; color: white; }
-    .dark { background: #2c3e50; color: white; }
+    .btn-emergency { background: #e53935; color: white; }
+    .btn-location { background: #1e88e5; color: white; }
+    .btn-map { background: #43a047; color: white; }
+    .btn-contact { background: #fb8c00; color: white; }
 
     .output {
         margin-top: 10px;
@@ -60,42 +48,32 @@
     }
 </style>
 </head>
-
 <body>
 
 <h1>🚗 MechFind Live Demo</h1>
 
-<div class="container">
+<div class="card">
+    <h3>🚨 Emergency Button</h3>
+    <button class="btn-emergency" onclick="emergency()">Tap for Help</button>
+    <div id="emergencyOutput" class="output"></div>
+</div>
 
-    <!-- Emergency -->
-    <div class="card">
-        <div class="title">🚨 One-Tap Emergency</div>
-        <button class="btn danger" onclick="emergency()">Emergency</button>
-        <div id="emergencyOutput" class="output"></div>
-    </div>
+<div class="card">
+    <h3>📍 Detect Location</h3>
+    <button class="btn-location" onclick="locationDetect()">Get Location</button>
+    <div id="locationOutput" class="output"></div>
+</div>
 
-    <!-- Location -->
-    <div class="card">
-        <div class="title">📍 Detect Location</div>
-        <button class="btn primary" onclick="locationDetect()">Get Location</button>
-        <div id="locationOutput" class="output"></div>
-    </div>
+<div class="card">
+    <h3>🗺 Nearby Mechanics</h3>
+    <button class="btn-map" onclick="showMechanics()">Show Mechanics</button>
+    <div id="mapOutput" class="output"></div>
+</div>
 
-    <!-- Nearby Mechanics (UPDATED ICON 📍) -->
-    <div class="card">
-        <div class="title">📍 Nearby Mechanics</div>
-        <button class="btn success" onclick="findMechanics()">Find Mechanics</button>
-        <div id="mechanicOutput" class="output"></div>
-    </div>
-
-    <!-- Call & Chat -->
-    <div class="card">
-        <div class="title">📞 Contact Mechanic</div>
-        <button class="btn dark" onclick="callNow()">Call</button>
-        <button class="btn primary" onclick="chatNow()">Chat</button>
-        <div id="contactOutput" class="output"></div>
-    </div>
-
+<div class="card">
+    <h3>📞 Contact Mechanic</h3>
+    <button class="btn-contact" onclick="contact()">Call / Chat</button>
+    <div id="contactOutput" class="output"></div>
 </div>
 
 <script>
@@ -109,19 +87,14 @@ function locationDetect() {
     "Location detected: Davao City";
 }
 
-function findMechanics() {
-    document.getElementById("mechanicOutput").innerText =
-    "Juan Auto Repair (1.2 km) | Mark Garage (2.5 km)";
+function showMechanics() {
+    document.getElementById("mapOutput").innerText =
+    "Juan Auto Repair (1.2km), Mark Garage (2.5km)";
 }
 
-function callNow() {
+function contact() {
     document.getElementById("contactOutput").innerText =
-    "Calling mechanic...";
-}
-
-function chatNow() {
-    document.getElementById("contactOutput").innerText =
-    "Opening chat...";
+    "Mechanic confirmed: On the way (15 mins ETA)";
 }
 </script>
 
