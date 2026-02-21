@@ -91,50 +91,45 @@ button.demo-btn {
 
 <body>
 
-<!-- HERO (UNCHANGED TEXT) -->
 <div class="hero">
     <h1>Mechanap</h1>
     <p>One-Tap Emergency Access to Nearby Trusted Mechanics</p>
-    <button class="btn btn-primary" onclick="scrollToDemo()">Try the Demo</button>
+    <button type="button" class="btn btn-primary" onclick="scrollToDemo()">Try the Demo</button>
 </div>
 
-<!-- PROBLEM -->
 <div class="section gray">
     <h2>The Problem</h2>
     <p>Car breakdowns cause stress, delays, and lost income. Drivers struggle to find nearby reliable mechanics during emergencies.</p>
 </div>
 
-<!-- DEMO SECTION -->
 <div id="demo" class="section">
     <h2>Live Feature Demo</h2>
 
     <div class="card">
         <h3>🚨 Emergency Button</h3>
-        <button class="demo-btn btn-emergency" onclick="emergency()">Tap for Help</button>
+        <button type="button" class="demo-btn btn-emergency" onclick="emergency()">Tap for Help</button>
         <div id="emergencyOutput" class="output"></div>
     </div>
 
     <div class="card">
         <h3>📍 Detect Location</h3>
-        <button class="demo-btn btn-location" onclick="locationDetect()">Get Location</button>
+        <button type="button" class="demo-btn btn-location" onclick="locationDetect()">Get Location</button>
         <div id="locationOutput" class="output"></div>
     </div>
 
     <div class="card">
         <h3>📍 Nearby Mechanics</h3>
-        <button class="demo-btn btn-map" onclick="showMechanics()">Show Mechanics</button>
+        <button type="button" class="demo-btn btn-map" onclick="showMechanics()">Show Mechanics</button>
         <div id="mapOutput" class="output"></div>
     </div>
 
     <div class="card">
         <h3>📞 Contact Mechanic</h3>
-        <button class="demo-btn btn-contact" onclick="contact()">Call / Chat</button>
+        <button type="button" class="demo-btn btn-contact" onclick="contact()">Call / Chat</button>
         <div id="contactOutput" class="output"></div>
     </div>
-
 </div>
 
-<!-- CONTACT -->
 <div class="contact">
     <h3>Contact Us</h3>
     <p>Email: mechanap@gmail.com</p>
@@ -142,26 +137,35 @@ button.demo-btn {
 </div>
 
 <script>
+function clearOutputs() {
+    document.querySelectorAll('.output').forEach(el => el.innerText = '');
+}
+
 function scrollToDemo() {
-    document.getElementById("demo").scrollIntoView({ behavior: "smooth" });
+    const demo = document.getElementById("demo");
+    if (demo) demo.scrollIntoView({ behavior: "smooth" });
 }
 
 function emergency() {
+    clearOutputs();
     document.getElementById("emergencyOutput").innerText =
     "Searching for nearby mechanics...";
 }
 
 function locationDetect() {
+    clearOutputs();
     document.getElementById("locationOutput").innerText =
     "Location detected: Davao City";
 }
 
 function showMechanics() {
+    clearOutputs();
     document.getElementById("mapOutput").innerText =
     "Juan Auto Repair (1.2km), Mark Garage (2.5km)";
 }
 
 function contact() {
+    clearOutputs();
     document.getElementById("contactOutput").innerText =
     "Mechanic confirmed: On the way (15 mins ETA)";
 }
